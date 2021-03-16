@@ -35,6 +35,7 @@ h1{
 #cr{
     text-align: center;
     font-family: Helvetica;
-    font-size: 40px;
+    font-weight: bold;
+    font-size: 18 px;
     background: linear-gradient(blue,pink);
 }
