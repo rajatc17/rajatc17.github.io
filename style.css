@@ -1,41 +1,27 @@
-main, header{
-    font-family: Helvetica;
-}
-
-.title{
-    font-family: Helvetica;
-    font-size: 100px;
-    font-weight: bold;
-    color: khaki;
+body{
+    background-color:black;
     text-align: center;
-    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/pattern.jpeg");
+    font-family: Verdana;
 }
 
-.blue{
-    font-weight: bold;
-    color: blue;
+a{
+    color: aquamarine;
+    font-size: 16px;
 }
 
-h1{
-    font-size: 32px;
-    font-weight: bold;
+.tc h1{
+    font-weight: normal;
+    font-size: 50px;
+    color: white;
 }
 
-.b h1{
-    background-color: mediumspringgreen;
+main h1,footer h1{
+    color: white;
+    font-weight: 300;
+    font-size: 42px;
 }
 
-.f h1{
-    background-color: lightcoral;
-}
-
-.p h1{
-    background-color: skyblue;
-}
-#cr{
-    text-align: center;
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 18 px;
-    background: linear-gradient(blue,pink);
+main p{
+    font-size: 21px;
+    color: gray;
 }
