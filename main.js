@@ -1,9 +1,6 @@
 // The keys and notes variables store the piano keys
-const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'high-c-key', 'c-sharp-key', 'd-sharp-key', 'f-sharp-key', 'g-sharp-key', 'a-sharp-key'];
-const notes = [];
-keys.forEach(function(key){
-  notes.push(document.getElementById(key));
-})
+let k1 = document.getElementsByClassName('key');
+let k2 = document.getElementsByClassName('black-key');
 
 // Write named functions that change the color of the keys below
 const keyPlay = function(event){
@@ -17,10 +14,24 @@ const handleKeys = function(note){
     note.onmousedown = keyPlay;
     note.onmouseup = keyReturn;
 }
-
+let max = k1.length>k2.length?k1.length:k2.length;
 // Write a loop that runs the array elements through the function
-notes.forEach(note => handleKeys(note));
-
+//notes.forEach(note => handleKeys(note));
+    for(let i = 0 ; i < max ; i++)
+    {
+        if(k1[i] === undefined){
+            handleKeys(k2[i]);
+            continue;
+        }
+        else if(k2[i] === undefined){
+            handleKeys(k1[i]);
+            continue;
+        }
+        else{
+            handleKeys(k1[i]);
+            handleKeys(k2[i]);
+        }
+    }
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
 let nextTwo = document.getElementById('second-next-line');
